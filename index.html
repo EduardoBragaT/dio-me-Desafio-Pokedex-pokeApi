@@ -10,8 +10,8 @@
     <title>Pokedex</title>
 
     <!-- Normalize css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Fontes -->
@@ -27,9 +27,23 @@
 </head>
 
 <body>
-    <main>
-        <h1>Meu Primeiro site</h1>
-    </main>
+    <section class="content">
+        <h1>Pokedex</h1>
+
+        <ol class="pokemons">
+            <li class="pokemon">
+                <span class="number">#001</span>
+                <span class="name">Bulbasaur</span>
+                <div class="detail">
+                    <ol class="types">
+                        <li class="type">Grass</li>
+                        <li class="type">Poison</li>
+                    </ol>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
+                </div>
+            </li>
+        </ol>
+    </section>
     <script defer src="./src/scripts/main.js"></script>
 </body>
 
