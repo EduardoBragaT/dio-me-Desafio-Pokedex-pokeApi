@@ -5,9 +5,7 @@ const limit = 10;
 let offset = 0;
 
 
-function abrirCard() {
-    document.createElement("div").querySelector(".url_audio")
-    console.log(this.querySelector(".url_audio").value);
+function soundPokemon() {
     let audio = new Audio();
     audio.src = this.querySelector(".url_audio").value
     audio.volume= 0.05;
@@ -37,7 +35,7 @@ function loadPokemonItens(offset, limit) {
 
             const newPokemons = pokemonList.querySelectorAll('.pokemon');
             newPokemons.forEach(pokemon => {
-                pokemon.addEventListener('click', abrirCard);
+                pokemon.addEventListener('click', soundPokemon);
             });
         })
 }
