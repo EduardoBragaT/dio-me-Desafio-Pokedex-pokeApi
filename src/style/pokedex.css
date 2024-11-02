@@ -79,11 +79,6 @@
     z-index: 1;
 }
 
-.pokemon:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s;
-}
-
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
@@ -99,7 +94,7 @@
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+    } 
 }
 
 /* Fire */
