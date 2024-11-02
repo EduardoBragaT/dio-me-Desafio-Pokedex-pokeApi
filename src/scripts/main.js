@@ -4,6 +4,16 @@ const maxRecords = 151;
 const limit = 10;
 let offset = 0;
 
+
+function abrirCard() {
+    document.createElement("div").querySelector(".url_audio")
+    console.log(this.querySelector(".url_audio").value);
+    let audio = new Audio();
+    audio.src = this.querySelector(".url_audio").value
+    audio.volume= 0.05;
+    audio.play();
+}
+
 function loadPokemonItens(offset, limit) {
     pokeApi
         .getPokemons(offset, limit)
@@ -19,10 +29,16 @@ function loadPokemonItens(offset, limit) {
                         <div class="image_container">
                             <img src="${pokemon.photo}" alt="${pokemon.name}">
                         </div>
+                        <input type="hidden" name="sound" class="url_audio" value="${pokemon.cry}">
                     </div>
                 </li>
         `).join("");
             pokemonList.innerHTML += newHTML;
+
+            const newPokemons = pokemonList.querySelectorAll('.pokemon');
+            newPokemons.forEach(pokemon => {
+                pokemon.addEventListener('click', abrirCard);
+            });
         })
 }
 

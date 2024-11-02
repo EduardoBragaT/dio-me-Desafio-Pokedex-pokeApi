@@ -10,6 +10,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types;
     pokemon.type = type;
     pokemon.photo = pokeDetail.sprites.other['official-artwork'].front_default? pokeDetail.sprites.other['official-artwork'].front_default : pokeDetail.sprites.front_default;
+    pokemon.cry = pokeDetail.cries.latest;
     return pokemon;
 }
 
